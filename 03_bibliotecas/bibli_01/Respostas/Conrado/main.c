@@ -6,8 +6,8 @@ int main () {
 
     scanf("%f", &raio);
 
-    area = AreaDaEsfera(raio);
-    volume = VolumeDaEsfera(raio);
+    area = calcula_area(raio);
+    volume = calcula_volume(raio);
 
     printf("Area: %.02f\nVolume: %.02f\n", area, volume);
 
