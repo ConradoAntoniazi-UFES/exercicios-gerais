@@ -39,5 +39,13 @@ void imprimeDataExtenso(int dia, int mes, int ano) {
 }
 
 int numeroDiasMes(int mes, int ano) {
-    
+    if(verificaBissexto(ano) && mes == 2) return 29;
+    else if(!verificaBissexto(ano) && mes == 2) return 28;
+    else if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes ==12) return 31;
+    else return 30;
+}
+
+int comparaData(int dia1, int mes1, int ano1, int dia2, int mes2, int ano2) {
+    if(dia1 == dia2 && mes1 == mes2 && ano1 == ano2) return 0;
+    else if(dia1 > 1);
 }
