@@ -1,5 +1,5 @@
-#include "matrix_utils.h"
 #include <stdio.h>
+#include "matrix_utils.h"
 
 void matrix_read(int rows, int cols, int matrix[rows][cols]) {
     int i, j;
@@ -83,7 +83,7 @@ void matrix_multiply(int rows1, int cols1, int matrix1[rows1][cols1], int rows2,
             }
         }
 
-    } else printf("Erro: as dimensoes da matriz nao correspondem\n");
+    } else printf("Erro: o numero de colunas da primeira matriz eh diferente do numero de linhas da segunda matriz\n");
 }
 
 void transpose_matrix(int rows, int cols, int matrix[rows][cols], int result[cols][rows]) {
