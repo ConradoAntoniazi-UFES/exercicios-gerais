@@ -1,0 +1,4 @@
+Resultados/Conrado/main/data.c: In function ‘comparaData’:
+Resultados/Conrado/main/data.c:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+   58 | }
+      | ^

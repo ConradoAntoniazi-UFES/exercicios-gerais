@@ -1,0 +1,163 @@
+Ignorando o Valgrind
+Rodando o script do Aluno - Arquivos header necessários do professor existem na pasta Includes
+ - Arquivos objetos necessários do professor existem na pasta Gabarito-obj.
+#######################################
+ALUNO: Conrado
+#######################################
+CRIANDO O DIRETÓRIO DE RESULTADO PARA Conrado:
+ - Diretório Resultados/Conrado criado com sucesso!
+ - Diretório Resultados/Conrado/data criado com sucesso!
+ - Diretório Resultados/Conrado/main criado com sucesso!
+ - Diretório Resultados/Conrado/completo criado com sucesso!
+ - Arquivos criados: ok!
+
+CHECKANDO OS ARQUIVOS DO ALUNO:
+ - Arquivo esperado 'Respostas/Conrado/data.c' encontrado!
+ - Arquivo esperado 'Respostas/Conrado/data.h' encontrado!
+ - Arquivo esperado 'Respostas/Conrado/main.c' encontrado!
+ - Arquivos esperados enviados: Ok!
+
+COPIANDO OS ARQUIVOS PARA A PASTA DE RESULTADO DO ALUNO:
+ - Pasta data:
+ - Copiando os Casos de teste para a pasta Resultados/Conrado/data
+ - Copiando os 'Respostas/Conrado/*.h' do aluno para a pasta Resultados/Conrado/data
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Conrado/data
+ - Copiando os 'Respostas/Conrado/*.c' do aluno para a pasta Resultados/Conrado/data
+ - Pasta main:
+ - Copiando os Casos de teste para a pasta Resultados/Conrado/main
+ - Copiando os 'Respostas/Conrado/*.h' do aluno para a pasta Resultados/Conrado/main
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Conrado/main
+ - Copiando os 'Respostas/Conrado/*.c' do aluno para a pasta Resultados/Conrado/main
+ - Pasta completo:
+ - Copiando os Casos de teste para a pasta Resultados/Conrado/completo
+ - Copiando os 'Respostas/Conrado/*.h' do aluno para a pasta Resultados/Conrado/completo
+ - Copiando os 'Respostas/Conrado/*.c' do aluno para a pasta Resultados/Conrado/completo
+ - Arquivos copiados: ok!
+
+COMPILANDO OS ARQUIVOS NA PASTA DE RESULTADO DO ALUNO:
+ - Pasta data:
+ - Compilando o arquivo data.c do aluno, gerando o data.o
+ - Compilando o arquivo main.c do aluno, gerando o main.o
+ - Arquivo de output gerado: Resultados/Conrado/data/result_compilation.txt.
+ - Pasta main:
+ - Compilando o arquivo data.c do aluno, gerando o data.o
+ - Compilando o arquivo main.c do aluno, gerando o main.o
+ - Arquivo de output gerado: Resultados/Conrado/main/result_compilation.txt.
+ - Pasta completo:
+ - Compilando o arquivo data.c do aluno, gerando o data.o
+ - Compilando o arquivo main.c do aluno, gerando o main.o
+ - Arquivo de output gerado: Resultados/Conrado/completo/result_compilation.txt.
+ - Copiando os arquivos objetos do professor para cada subpasta do Resultado do Conrado:
+ - Copiando o Gabarito-obj/data.o para a pasta Resultados/Conrado/main
+ - Copiando o Gabarito-obj/main.o para a pasta Resultados/Conrado/data
+ - Arquivos Compilados: ok!
+
+LINKANDO OS ARQUIVOS COMPILADOS:
+ - Pasta data:
+ - Gerando o binário prog linkando com o(s) arquivo(s) data/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Conrado/data/result_linking.txt
+ - Pasta main:
+ - Gerando o binário prog linkando com o(s) arquivo(s) main/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Conrado/main/result_linking.txt
+ - Pasta completo:
+ - Gerando o binário prog linkando com o(s) arquivo(s) completo/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Conrado/completo/result_linking.txt
+
+EXECUTANDO O VALGRIND EM CADA CASO:
+ - Pasta data / Caso 1:
+ - Arquivo de output gerado: Resultados/Conrado/data/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta data / Caso 2:
+ - Arquivo de output gerado: Resultados/Conrado/data/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta data / Caso 3:
+ - Arquivo de output gerado: Resultados/Conrado/data/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta data / Caso 4:
+ - Arquivo de output gerado: Resultados/Conrado/data/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta data / Caso 5:
+ - Arquivo de output gerado: Resultados/Conrado/data/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta data / Caso 6:
+ - Arquivo de output gerado: Resultados/Conrado/data/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Incorreto!
+ - Pasta main / Caso 1:
+ - Arquivo de output gerado: Resultados/Conrado/main/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta main / Caso 2:
+ - Arquivo de output gerado: Resultados/Conrado/main/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta main / Caso 3:
+ - Arquivo de output gerado: Resultados/Conrado/main/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta main / Caso 4:
+ - Arquivo de output gerado: Resultados/Conrado/main/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta main / Caso 5:
+ - Arquivo de output gerado: Resultados/Conrado/main/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta main / Caso 6:
+ - Arquivo de output gerado: Resultados/Conrado/main/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta completo / Caso 1:
+ - Arquivo de output gerado: Resultados/Conrado/completo/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta completo / Caso 2:
+ - Arquivo de output gerado: Resultados/Conrado/completo/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta completo / Caso 3:
+ - Arquivo de output gerado: Resultados/Conrado/completo/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta completo / Caso 4:
+ - Arquivo de output gerado: Resultados/Conrado/completo/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta completo / Caso 5:
+ - Arquivo de output gerado: Resultados/Conrado/completo/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Ok!
+ - Pasta completo / Caso 6:
+ - Arquivo de output gerado: Resultados/Conrado/completo/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
+ - Resultado para o saida.txt: Incorreto!
+
+#######################################
+RESULTADOS FINAIS
+#######################################
+
+----------------------------------------------------------------------------
+Nome 0: Conrado
+ - Arquivos Corretos: 3 de 3 / Nota 10.00
+ - Compilações Corretas: 6 de 6 / Nota 10.00
+ - Linkagens Corretas: 3 de 3 / Nota 10.00
+ - Resultados Corretos data: 5 de 6 / Nota 8.33
+ - Resultados Corretos main: 6 de 6 / Nota 10.00
+ - Resultados Corretos completo: 5 de 6 / Nota 8.33
+ - Soma das notas do Conrado: 56.660
+ - Campos Considerados: 6
+ - Média do Conrado: 9.44
+
+----------------------------------------------------------------------------
+
+Arquivo CSV Resultado.csv com os resultados finais foi gerado na pasta raíz!
+
+
