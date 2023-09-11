@@ -47,5 +47,26 @@ int numeroDiasMes(int mes, int ano) {
 
 int comparaData(int dia1, int mes1, int ano1, int dia2, int mes2, int ano2) {
     if(dia1 == dia2 && mes1 == mes2 && ano1 == ano2) return 0;
-    else if(dia1 > 1);
+
+    else if(ano1 > ano2) return 1;
+    else if(ano1 == ano2 && mes1 > mes2) return 1;
+    else if(ano1 == ano2 && mes1 == mes2 && dia1 > dia2) return 1;
+
+    else if(ano1 < ano2) return -1;
+    else if(ano1 == ano2 && mes1 < mes2) return -1;
+    else if(ano1 == ano2 && mes1 == mes2 && dia1 < dia2) return -1;
+}
+
+int calculaDiasAteMes(int mes, int ano) {
+    int i, soma_dias = 0;
+
+    for(i = 0; i < mes; i++) {
+        soma_dias += numeroDiasMes(mes, ano);
+    }
+
+    return soma_dias;
+}
+
+int calculaDiferencaDias(int dia1, int mes1, int ano1, int dia2, int mes2, int ano2) {
+    
 }
