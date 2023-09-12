@@ -60,8 +60,8 @@ int comparaData(int dia1, int mes1, int ano1, int dia2, int mes2, int ano2) {
 int calculaDiasAteMes(int mes, int ano) {
     int i, soma_dias = 0;
 
-    for(i = 0; i < mes; i++) {
-        soma_dias += numeroDiasMes(mes, ano);
+    for(i = 1; i < mes; i++) {
+        soma_dias += numeroDiasMes(i, ano);
     }
 
     return soma_dias;

@@ -90,7 +90,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta data / Caso 6:
  - Arquivo de output gerado: Resultados/Conrado/data/Casos/6/result_valgrind.txt.
  - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
- - Resultado para o saida.txt: Incorreto!
+ - Resultado para o saida.txt: Ok!
  - Pasta main / Caso 1:
  - Arquivo de output gerado: Resultados/Conrado/main/Casos/1/result_valgrind.txt.
  - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
@@ -138,7 +138,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta completo / Caso 6:
  - Arquivo de output gerado: Resultados/Conrado/completo/Casos/6/result_valgrind.txt.
  - Valgrind: Ok! allocs: 2, frees: 2, errors: 0.
- - Resultado para o saida.txt: Incorreto!
+ - Resultado para o saida.txt: Ok!
 
 #######################################
 RESULTADOS FINAIS
@@ -149,12 +149,12 @@ Nome 0: Conrado
  - Arquivos Corretos: 3 de 3 / Nota 10.00
  - Compilações Corretas: 6 de 6 / Nota 10.00
  - Linkagens Corretas: 3 de 3 / Nota 10.00
- - Resultados Corretos data: 5 de 6 / Nota 8.33
+ - Resultados Corretos data: 6 de 6 / Nota 10.00
  - Resultados Corretos main: 6 de 6 / Nota 10.00
- - Resultados Corretos completo: 5 de 6 / Nota 8.33
- - Soma das notas do Conrado: 56.660
+ - Resultados Corretos completo: 6 de 6 / Nota 10.00
+ - Soma das notas do Conrado: 60.000
  - Campos Considerados: 6
- - Média do Conrado: 9.44
+ - Média do Conrado: 10.00
 
 ----------------------------------------------------------------------------
 
