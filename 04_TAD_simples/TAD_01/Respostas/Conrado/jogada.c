@@ -2,7 +2,11 @@
 #include <stdio.h>
 
 tJogada LeJogada() {
+    tJogada jogada;
     
+    if(scanf("%d %d", &jogada.x, &jogada.y) == 2) jogada.sucesso = 1;
+
+    return jogada;
 }
 
 int ObtemJogadaX(tJogada jogada) {

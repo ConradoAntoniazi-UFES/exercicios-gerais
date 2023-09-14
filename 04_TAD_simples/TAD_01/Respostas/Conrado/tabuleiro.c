@@ -19,8 +19,10 @@ tTabuleiro CriaTabuleiro() {
 }
 
 tTabuleiro MarcaPosicaoTabuleiro(tTabuleiro tabuleiro, int peca, int x, int y) {
-    if(peca == 1) tabuleiro.posicoes[x][y] = 'X';
-    else tabuleiro.posicoes[x][y] = '0';
+    if(peca == 1 && EstaLivrePosicaoTabuleiro(tabuleiro, x, y)) tabuleiro.posicoes[x][y] = tabuleiro.peca1;
+    else if(peca == 2 && EstaLivrePosicaoTabuleiro(tabuleiro, x, y)) tabuleiro.posicoes[x][y] = tabuleiro.peca2;
+
+    return tabuleiro;
 }
 
 int TemPosicaoLivreTabuleiro(tTabuleiro tabuleiro) {
