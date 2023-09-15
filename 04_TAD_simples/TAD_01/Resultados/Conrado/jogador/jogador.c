@@ -10,7 +10,6 @@ tJogador CriaJogador(int idJogador) {
 }
 
 tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro) {
-    int x, y; //posicoes da jogada do jogador
     tJogada jogada;
 
     do {
