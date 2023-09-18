@@ -14,14 +14,16 @@ tJogo CriaJogo() {
 void ComecaJogo(tJogo jogo) {
     
     while(!AcabouJogo(jogo)) {
-        printf("Jogador 1\n");
         jogo.tabuleiro = JogaJogador(jogo.jogador1, jogo.tabuleiro); //jogada jogador 1
         ImprimeTabuleiro(jogo.tabuleiro);
         if(VenceuJogador(jogo.jogador1, jogo.tabuleiro)) {
             printf("JOGADOR 1 Venceu!\n");
             break;
         }
-        printf("Jogador 2\n");
+        if(AcabouJogo(jogo)) {
+            printf("Sem vencedor!\n");
+            break;
+        }
         jogo.tabuleiro = JogaJogador(jogo.jogador2, jogo.tabuleiro); //jogada jogador 2
         ImprimeTabuleiro(jogo.tabuleiro);
         if(VenceuJogador(jogo.jogador2, jogo.tabuleiro)) {

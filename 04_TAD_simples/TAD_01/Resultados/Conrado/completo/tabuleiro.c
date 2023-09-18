@@ -44,7 +44,7 @@ int EstaMarcadaPosicaoPecaTabuleiro(tTabuleiro tabuleiro, int x, int y, int peca
 }
 
 int EstaLivrePosicaoTabuleiro(tTabuleiro tabuleiro, int x, int y) {
-    if(tabuleiro.posicoes[x][y] == tabuleiro.pecaVazio) return 1;
+    if(tabuleiro.posicoes[y][x] == tabuleiro.pecaVazio) return 1;
     else return 0;
 }
 

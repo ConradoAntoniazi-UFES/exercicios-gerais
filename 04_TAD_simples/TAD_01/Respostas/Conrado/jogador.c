@@ -13,25 +13,15 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro) {
     tJogada jogada;
 
     do {
+        printf("Jogador %d\n", jogador.id);
         jogada = LeJogada();
-        scanf("%*[^\n]");
 
         if(!EhPosicaoValidaTabuleiro(ObtemJogadaX(jogada), ObtemJogadaY(jogada))) {
-            if(jogador.id == ID_JOGADOR_1) {
-                printf("Jogador 1\n");
-            }
-            else {
-                printf("Jogador 2\n");
-            }
             printf("Posicao invalida (FORA DO TABULEIRO - [%d, %d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+
         } else if(!EstaLivrePosicaoTabuleiro(tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada))) {
-            if(jogador.id == ID_JOGADOR_1) {
-                printf("Jogador 1\n");
-            }
-            else {
-                printf("Jogador 2\n");
-            }
             printf("Posicao invalida (OCUPADA - [%d, %d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+
         } else {
             printf("Jogada [%d,%d]!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
         }
