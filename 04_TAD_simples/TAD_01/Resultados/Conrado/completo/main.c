@@ -4,9 +4,8 @@
 int main() {
     tJogo jogo;
 
-    jogo = CriaJogo();
-
     do {
+        jogo = CriaJogo();
         ComecaJogo(jogo);
     } while (ContinuaJogo());
 

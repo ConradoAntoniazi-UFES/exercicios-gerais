@@ -28,10 +28,10 @@ void ComecaJogo(tJogo jogo) {
             printf("JOGADOR 2 Venceu!\n");
             break;
         }
-    }
-
-    if(AcabouJogo(jogo)) {
-        printf("Sem vencedor!\n");
+        if(AcabouJogo(jogo)) {
+            printf("Sem vencedor!\n");
+            break;
+        }
     }
 }
 
