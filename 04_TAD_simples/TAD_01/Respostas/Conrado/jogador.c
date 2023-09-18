@@ -17,10 +17,10 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro) {
         jogada = LeJogada();
 
         if(!EhPosicaoValidaTabuleiro(ObtemJogadaX(jogada), ObtemJogadaY(jogada))) {
-            printf("Posicao invalida (FORA DO TABULEIRO - [%d, %d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+            printf("Posicao invalida (FORA DO TABULEIRO - [%d,%d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
 
         } else if(!EstaLivrePosicaoTabuleiro(tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada))) {
-            printf("Posicao invalida (OCUPADA - [%d, %d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+            printf("Posicao invalida (OCUPADA - [%d,%d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
 
         } else {
             printf("Jogada [%d,%d]!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));

@@ -44,11 +44,10 @@ int AcabouJogo(tJogo jogo) {
 }
 
 int ContinuaJogo() {
-    char acao;
+    char acao = '\0';
 
     printf("Jogar novamente? (s,n)\n");
-    scanf("%*[^\n]");
-    scanf("%*[\n]");
+    scanf("%*[^sn]");
     scanf("%c", &acao);
 
     if(acao == 's') return 1;
