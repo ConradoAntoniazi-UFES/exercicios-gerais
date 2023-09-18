@@ -8,6 +8,7 @@ tJogada LeJogada() {
     if(scanf("%d %d", &jogada.x, &jogada.y) == 2) {
         jogada.sucesso = 1;
     } else {
+        scanf("%*[^\n]");
         jogada.sucesso = 0;
     }
 

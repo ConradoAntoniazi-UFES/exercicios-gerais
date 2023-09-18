@@ -35,7 +35,7 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro) {
         } else {
             printf("Jogada [%d,%d]!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
         }
-    } while(!FoiJogadaBemSucedida(jogada) || !EhPosicaoValidaTabuleiro(ObtemJogadaX(jogada), ObtemJogadaY(jogada)) || !EstaLivrePosicaoTabuleiro(tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada)));
+    } while(!FoiJogadaBemSucedida(jogada) || !EhPosicaoValidaTabuleiro(ObtemJogadaX(jogada), ObtemJogadaY(jogada)) || !TemPosicaoLivreTabuleiro(tabuleiro));
 
 
     if(jogador.id == ID_JOGADOR_1) {
