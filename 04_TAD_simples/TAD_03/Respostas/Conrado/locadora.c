@@ -51,6 +51,7 @@ tLocadora alugarFilmesLocadora (tLocadora locadora, int* codigos, int quantidade
             for(int c = 0; c < locadora.numFilmes; c++) {
                 if(codigos[i] == obterCodigoFilme(locadora.filme[c])) {
                     alugarFilme(locadora.filme[c]);
+                    locadora.lucro += obterValorFilme(locadora.filme[c]);
                 }
             }
         }
@@ -96,13 +97,34 @@ tLocadora lerDevolucaoLocadora (tLocadora locadora) {
 }
 
 tLocadora ordenarFilmesLocadora (tLocadora locadora) {
-    
+    int i = 0, c = 0;
+    tFilme aux;
+
+    for(i = 0; i < locadora.numFilmes; i++) {
+        for(c = i + 1; c < locadora.numFilmes; c++) {
+            if(compararNomesFilmes(locadora.filme[c], locadora.filme[i]) == -1) {
+                aux = locadora.filme[i];
+                locadora.filme[i] = locadora.filme[c];
+                locadora.filme[c] = aux;
+            }
+        }
+    }
+
+    return locadora;
 }
 
 void consultarEstoqueLocadora (tLocadora locadora) {
+    locadora = ordenarFilmesLocadora(locadora);
+    int i;
+
+    for(i = 0; i < locadora.numFilmes; i++) {
+        printf("%d - ", obterCodigoFilme(locadora.filme[i]));
+        imprimirNomeFilme(locadora.filme[i]);
+        printf(" Fitas em estoque: %d\n", obterQtdEstoqueFilme(locadora.filme[i]));
+    }
 
 }
 
 void consultarLucroLocadora (tLocadora locadora) {
-
+    printf("Lucro total R$%d", locadora.lucro);
 }
