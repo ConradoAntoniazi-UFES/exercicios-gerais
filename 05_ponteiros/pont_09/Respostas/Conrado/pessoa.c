@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 tPessoa CriaPessoa() {
-    tPessoa pesssoa;
+    tPessoa pessoa;
 
-    pesssoa.nome[0] = '\0';
-    pesssoa.pai = NULL;
-    pesssoa.mae = NULL;
+    pessoa.nome[0] = '\0';
+    pessoa.pai = NULL;
+    pessoa.mae = NULL;
 
-    return pesssoa;
+    return pessoa;
 }
 
 void LePessoa(tPessoa *pessoa) {
