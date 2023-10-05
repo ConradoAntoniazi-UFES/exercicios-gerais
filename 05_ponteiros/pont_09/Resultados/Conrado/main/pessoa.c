@@ -12,7 +12,6 @@ tPessoa CriaPessoa() {
 }
 
 void LePessoa(tPessoa *pessoa) {
-    *pessoa = CriaPessoa();
 
     scanf("%*[^A-Za-z]");
     scanf("%[^\n]", pessoa->nome);

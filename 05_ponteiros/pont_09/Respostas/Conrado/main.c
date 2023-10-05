@@ -9,6 +9,7 @@ int main () {
     tPessoa pessoas[num];
 
     for (int i = 0; i < num; i++) {
+        pessoas[i] = CriaPessoa();
         LePessoa(&pessoas[i]);
     }
 

@@ -2,13 +2,14 @@
 #include <stdio.h>
 
 int main () {
-    int num, num2;
+    int num;
 
     scanf("%d\n", &num);
 
     tPessoa pessoas[num];
 
     for (int i = 0; i < num; i++) {
+        pessoas[i] = CriaPessoa();
         LePessoa(&pessoas[i]);
     }
 
