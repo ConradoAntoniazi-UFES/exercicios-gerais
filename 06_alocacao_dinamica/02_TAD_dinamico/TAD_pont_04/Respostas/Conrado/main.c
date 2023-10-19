@@ -20,7 +20,6 @@ void OrdemDeMatriculaAprovados(tAluno* alunos[], int num_alunos) {
 
 int main () {
     int num_alunos;
-    int num_aprovados;
     scanf("%d", &num_alunos);
 
     tAluno* alunos[num_alunos];
@@ -29,12 +28,14 @@ int main () {
         alunos[i] = CriaAluno();
 
         LeAluno(alunos[i]);
-
-        if(VerificaAprovacao(alunos[i])) num_aprovados++;
     }
 
-    for(int i = 0; i < num_aprovados; i++) {
-        ImprimeAluno(alunos[i]);
+    OrdemDeMatriculaAprovados(alunos, num_alunos);
+
+    for(int i = 0; i < num_alunos; i++) {
+        if(VerificaAprovacao(alunos[i])) ImprimeAluno(alunos[i]);
+
+        ApagaAluno(alunos[i]);
     }
 
     return 0;

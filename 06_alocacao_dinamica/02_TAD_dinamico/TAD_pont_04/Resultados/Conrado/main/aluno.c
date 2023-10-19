@@ -9,6 +9,7 @@ tAluno* CriaAluno() {
 
     if(aluno == NULL) {
         printf("Deu pau na CriaAluno (alocacao)\n");
+        exit(1);
     }
 
     aluno->nome = NULL;
@@ -37,6 +38,7 @@ void LeAluno(tAluno *aluno) {
 
         if(aluno->nome == NULL) {
             printf("Deu pau na LeAluno (alocacao)\n");
+            exit(1);
         }
 
         aluno->nome[tam_nome - 1] = caractere;
@@ -65,12 +67,6 @@ int VerificaAprovacao(tAluno* aluno) {
 }
 
 void ImprimeAluno(tAluno* aluno) {
-    int i = 0;
-
-    while (aluno->nome[i] != '\0') {
-    
-        printf("%c", aluno->nome[i]);
-        i++;
-    }
+    printf("%s", aluno->nome);
     printf("\n");
 }
