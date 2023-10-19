@@ -1,0 +1,76 @@
+#include "aluno.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+tAluno* CriaAluno() {
+    tAluno* aluno;
+
+    aluno = (tAluno*) malloc(sizeof(tAluno));
+
+    if(aluno == NULL) {
+        printf("Deu pau na CriaAluno (alocacao)\n");
+    }
+
+    aluno->nome = NULL;
+    aluno->matricula = -1;
+    aluno->n1 = -1;
+    aluno->n2 = -1;
+    aluno->n3 = -1;
+
+    return aluno;
+}
+
+void ApagaAluno(tAluno *aluno) {
+    free(aluno->nome);
+    free(aluno);
+}
+
+void LeAluno(tAluno *aluno) {
+    int tam_nome = 0;
+    int caractere;
+
+    scanf("%*[^A-Za-z]");
+
+    while ((caractere = getchar()) != '\n' && caractere != EOF) {
+        tam_nome++;
+        aluno->nome = realloc(aluno->nome, tam_nome);
+
+        if(aluno->nome == NULL) {
+            printf("Deu pau na LeAluno (alocacao)\n");
+        }
+
+        aluno->nome[tam_nome - 1] = caractere;
+    }
+    tam_nome++;
+    aluno->nome = realloc(aluno->nome, tam_nome);
+    aluno->nome[tam_nome - 1] = '\0';
+
+    scanf("%d %d %d %d", &aluno->matricula, &aluno->n1, &aluno->n2, &aluno->n3);
+}
+
+int ComparaMatricula(tAluno* aluno1, tAluno* aluno2) {
+    if(aluno1->matricula > aluno2->matricula) return 1;
+    else if(aluno1->matricula == aluno2->matricula) return 0;
+    else return -1;
+}
+
+int CalculaMediaAluno(tAluno* aluno) {
+    return (aluno->n1 + aluno->n2 + aluno->n3) / 3;
+}
+
+int VerificaAprovacao(tAluno* aluno) {
+    if(CalculaMediaAluno(aluno) >= 7) return 1;
+
+    return 0;
+}
+
+void ImprimeAluno(tAluno* aluno) {
+    int i = 0;
+
+    while (aluno->nome[i] != '\0') {
+    
+        printf("%c", aluno->nome[i]);
+        i++;
+    }
+    printf("\n");
+}
