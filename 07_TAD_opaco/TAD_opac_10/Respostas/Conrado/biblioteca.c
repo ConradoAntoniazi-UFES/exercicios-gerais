@@ -43,11 +43,12 @@ void AdicionarLivroNaBiblioteca(tBiblioteca* biblioteca, tLivros* livro) {
 void RemoverLivroDaBiblioteca(tBiblioteca* biblioteca, char *titulo) {
     for(int i = 0; i < biblioteca->numLivros; i++) {
         if(!VerificaTituloDoLivroNaBiblioteca(biblioteca->livros[i], titulo)) {
-            for(int c = i + 1; c < biblioteca->numLivros; c++) {
-                biblioteca->livros[c - 1] = biblioteca->livros[c];
+            ApagaLivro(biblioteca->livros[i]);
+            for(int c = i; c < biblioteca->numLivros - 1; c++) {
+                biblioteca->livros[c] = biblioteca->livros[c + 1];
+                biblioteca->livros[c + 1] = NULL;
             }
             (biblioteca->numLivros)--;
-            ApagaLivro(biblioteca->livros[biblioteca->numLivros]);
             biblioteca->livros = (tLivros**) realloc (biblioteca->livros, sizeof(tLivros*) * biblioteca->numLivros);
             printf("Livro removido com sucesso!\n");
             return;

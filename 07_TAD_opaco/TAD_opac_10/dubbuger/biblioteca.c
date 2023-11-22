@@ -43,8 +43,10 @@ void AdicionarLivroNaBiblioteca(tBiblioteca* biblioteca, tLivros* livro) {
 void RemoverLivroDaBiblioteca(tBiblioteca* biblioteca, char *titulo) {
     for(int i = 0; i < biblioteca->numLivros; i++) {
         if(!VerificaTituloDoLivroNaBiblioteca(biblioteca->livros[i], titulo)) {
+            ApagaLivro(biblioteca->livros[i]);
             for(int c = i + 1; c < biblioteca->numLivros; c++) {
                 biblioteca->livros[c - 1] = biblioteca->livros[c];
+                biblioteca->livros[c] = NULL;
             }
             (biblioteca->numLivros)--;
             ApagaLivro(biblioteca->livros[biblioteca->numLivros]);
@@ -65,8 +67,6 @@ void ListarLivrosDaBiblioteca(tBiblioteca* biblioteca) {
         printf("A biblioteca esta vazia!\n");
         return;
     }
-
-    ImprimeLivro(biblioteca->livros[0]);
 
     printf("\nLista de Livros na Biblioteca:\n");
     for(int i = 0; i < biblioteca->numLivros; i++) {

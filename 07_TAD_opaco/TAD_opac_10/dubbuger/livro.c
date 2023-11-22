@@ -64,9 +64,11 @@ void LerLivro(tLivros* livro) {
 }
 
 void ImprimeLivro(tLivros* livro) {
-    printf("Titulo: %s\n", livro->titulo);
-    printf("Autor: %s\n", livro->autor);
-    printf("Ano de Publicacao: %d\n\n", livro->ano);
+    if(livro != NULL) {
+        printf("Titulo: %s\n", livro->titulo);
+        printf("Autor: %s\n", livro->autor);
+        printf("Ano de Publicacao: %d\n\n", livro->ano);
+    }
 }
 
 char *getTitulo(tLivros* livro) {
